@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>我的技术博客 - 首页</title>
+<link rel="stylesheet" href="./static/common.css">
+<style>
+.main-content{display:grid;grid-template-columns:3fr 1fr;gap:30px;padding:0 40px 40px;max-width:1400px;margin:0 auto}
+.article-list{display:flex;flex-direction:column;gap:20px}
+.article-card{background:var(--bg-card);backdrop-filter:blur(10px);border:1px solid var(--border-color);border-radius:8px;padding:24px;transition:all .4s cubic-bezier(.34,1.56,.64,1);transform-origin:center bottom;cursor:none}
+.article-card:hover{border-color:var(--accent);transform:translateY(-6px) scale(1.02);box-shadow:0 12px 32px rgba(0,255,170,.15),0 0 0 1px var(--border-hover)}
+.article-title{font-size:20px;color:#fff;margin-bottom:8px;text-decoration:none;display:block;transition:color .3s}
+.article-title:hover{color:var(--accent);text-shadow:0 0 10px var(--accent-glow)}
+.article-meta{display:flex;gap:16px;color:var(--text-secondary);font-size:14px;margin-bottom:12px}
+.article-excerpt{color:var(--text-secondary);font-size:15px;margin-bottom:16px}
+.tag-list{display:flex;gap:8px}
+.tag{background:rgba(0,255,170,.1);color:var(--accent);padding:4px 10px;border-radius:4px;font-size:12px;border:1px solid var(--border-color);transition:all .3s}
+.tag:hover{background:var(--accent);color:var(--bg-primary);box-shadow:0 0 15px var(--accent-glow)}
+.sidebar{display:flex;flex-direction:column;gap:20px}
+.sidebar-card{background:var(--bg-card);backdrop-filter:blur(10px);border:1px solid var(--border-color);border-radius:8px;padding:20px}
+.sidebar-title{font-size:18px;margin-bottom:16px;color:#fff}
+.author-info{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.avatar{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-blue) 100%);display:flex;align-items:center;justify-content:center;color:var(--bg-primary);font-weight:700;box-shadow:0 0 20px var(--accent-glow)}
+.author-name{font-size:18px;color:#fff}
+.author-bio{color:var(--text-secondary);font-size:14px}
+.category-list{display:flex;flex-direction:column;gap:8px}
+.category-item{display:flex;justify-content:space-between;color:var(--text-secondary);font-size:14px;padding:8px 0;border-bottom:1px solid rgba(0,255,170,.1);transition:color .3s}
+.category-item:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<nav>
+    <a href="index.html" class="logo">我的博客</a>
+    <div class="nav-links">
+        <a href="home.html" class="active">首页</a>
+        <a href="articles.html">文章</a>
+        <a href="categories.html">分类</a>
+        <a href="tags.html">标签</a>
+        <a href="music.html">音乐</a>
+        <a href="about.html">关于</a>
+    </div>
+    <div class="nav-actions">
+        <a href="#" class="login-btn">登录</a>
+        <a href="#" class="start-btn">写文章</a>
+    </div>
+</nav>
+<div class="header-section">
+    <h1 class="blog-title">欢迎来到我的技术博客</h1>
+    <p class="blog-subtitle">分享网络技术、编程学习与开发踩坑记录</p>
+</div>
+<div class="main-content">
+    <div class="article-list">
+        <div class="article-card">
+            <a href="article-detail.html?id=1" class="article-title">如何用 Supabase 搭建免费后端服务</a>
+            <div class="article-meta"><span>2026-04-20</span><span>阅读：128</span></div>
+            <p class="article-excerpt">从零开始教你使用 Supabase 搭建数据库、用户认证和文件存储，轻松实现前后端分离项目...</p>
+            <div class="tag-list"><span class="tag">Supabase</span><span class="tag">后端</span><span class="tag">无服务器</span></div>
+        </div>
+        <div class="article-card">
+            <a href="article-detail.html?id=2" class="article-title">Vercel + Cloudflare Pages 静态网站部署指南</a>
+            <div class="article-meta"><span>2026-04-15</span><span>阅读：96</span></div>
+            <p class="article-excerpt">对比 Vercel 和 Cloudflare Pages 的部署流程，教你快速上线个人网站，享受全球CDN加速...</p>
+            <div class="tag-list"><span class="tag">Vercel</span><span class="tag">Cloudflare</span></div>
+        </div>
+        <div class="article-card">
+            <a href="article-detail.html?id=3" class="article-title">网络专业学生的学习路线分享</a>
+            <div class="article-meta"><span>2026-04-10</span><span>阅读：156</span></div>
+            <p class="article-excerpt">从基础的计算机网络到路由交换、云服务，分享适合高职学生的学习路径和资源推荐...</p>
+            <div class="tag-list"><span class="tag">学习路线</span><span class="tag">网络技术</span><span class="tag">职业规划</span></div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-card">
+            <h3 class="sidebar-title">关于我</h3>
+            <div class="author-info">
+                <div class="avatar">你</div>
+                <div>
+                    <div class="author-name">网络学习者</div>
+                    <div class="author-bio">高职网络专业学生 | 分享学习与项目实践</div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-card">
+            <h3 class="sidebar-title">文章分类</h3>
+            <div class="category-list">
+                <div class="category-item"><span>网络技术</span><span>12</span></div>
+                <div class="category-item"><span>后端开发</span><span>8</span></div>
+                <div class="category-item"><span>前端与部署</span><span>6</span></div>
+                <div class="category-item"><span>学习笔记</span><span>15</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer><p>© 2026 我的技术博客 | Powered by HTML + CSS</p></footer>
+<script src="./static/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>标签 - 我的技术博客</title>
+<link rel="stylesheet" href="./static/common.css">
+<style>
+.container{max-width:1000px;margin:40px auto;padding:0 40px}
+.page-title{font-size:28px;color:var(--accent);margin-bottom:20px;text-shadow:0 0 20px var(--accent-glow)}
+.page-desc{color:var(--text-secondary);margin-bottom:30px}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:12px}
+.tag-item{background:var(--bg-card);backdrop-filter:blur(10px);border:1px solid var(--border-color);border-radius:20px;padding:8px 16px;transition:all .4s cubic-bezier(.34,1.56,.64,1);cursor:none;display:flex;align-items:center;gap:6px}
+.tag-item:hover{border-color:var(--accent);background:rgba(0,255,170,.1);transform:translateY(-4px) scale(1.05);box-shadow:0 8px 20px rgba(0,255,170,.18),0 0 0 1px var(--border-hover)}
+.tag-name{color:var(--accent);font-size:14px}
+.tag-count{color:var(--text-secondary);font-size:12px;background:rgba(0,255,170,.1);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-color)}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<nav>
+    <a href="index.html" class="logo">我的博客</a>
+    <div class="nav-links">
+        <a href="home.html">首页</a>
+        <a href="articles.html">文章</a>
+        <a href="categories.html">分类</a>
+        <a href="tags.html" class="active">标签</a>
+        <a href="music.html">音乐</a>
+        <a href="about.html">关于</a>
+    </div>
+    <div class="nav-actions">
+        <a href="#" class="login-btn">登录</a>
+        <a href="#" class="start-btn">写文章</a>
+    </div>
+</nav>
+<div class="container">
+    <h1 class="page-title">文章标签</h1>
+    <p class="page-desc">按关键词快速筛选相关文章</p>
+    <div class="tag-cloud">
+        <div class="tag-item" onclick="location.href="articles.html?tag=Supabase'"><span class="tag-name">Supabase</span><span class="tag-count">1</span></div>
+        <div class="tag-item" onclick="location.href="articles.html?tag=后端'"><span class="tag-name">后端</span><span class="tag-count">8</span></div>
+        <div class="tag-item" onclick="location.href="articles.html?tag=Vercel'"><span class="tag-name">Vercel</span><span class="tag-count">2</span></div>
+        <div class="tag-item" onclick="location.href="articles.html?tag=Cloudflare'"><span class="tag-name">Cloudflare</span><span class="tag-count">3</span></div>
+        <div class="tag-item" onclick="location.href="articles.html?tag=网络技术'"><span class="tag-name">网络技术</span><span class="tag-count">12</span></div>
+        <div class="tag-item" onclick="location.href="articles.html?tag=学习路线'"><span class="tag-name">学习路线</span><span class="tag-count">2</span></div>
+        <div class="tag-item" onclick="location.href="articles.html?tag=部署'"><span class="tag-name">部署</span><span class="tag-count">5</span></div>
+        <div class="tag-item" onclick="location.href="articles.html?tag=无服务器'"><span class="tag-name">无服务器</span><span class="tag-count">3</span></div>
+        <div class="tag-item" onclick="location.href="articles.html?tag=职业规划'"><span class="tag-name">职业规划</span><span class="tag-count">1</span></div>
+    </div>
+</div>
+<footer><p>© 2026 我的技术博客 | Powered by HTML + CSS</p></footer>
+<script src="./static/common.js"></script>
+</body>
+</html>

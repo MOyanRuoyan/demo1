@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>如何用 Supabase 搭建免费后端服务 - 我的技术博客</title>
+<link rel="stylesheet" href="./static/common.css">
+<style>
+.container{max-width:800px;margin:40px auto;padding:0 40px}
+.article-header{margin-bottom:30px}
+.article-title-main{font-size:32px;color:#fff;margin-bottom:16px}
+.article-meta{display:flex;gap:20px;color:var(--text-secondary);font-size:14px;margin-bottom:20px}
+.article-tags{display:flex;gap:8px;margin-bottom:20px}
+.article-content{background:var(--bg-card);backdrop-filter:blur(10px);border:1px solid var(--border-color);border-radius:8px;padding:40px;font-size:16px;transition:all .4s cubic-bezier(.34,1.56,.64,1);transform-origin:center bottom;line-height:1.8}
+.article-content:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,255,170,.12),0 0 0 1px var(--border-hover)}
+.article-content h2{color:var(--accent);margin:30px 0 16px;font-size:24px;text-shadow:0 0 10px var(--accent-glow)}
+.article-content p{margin-bottom:20px}
+.article-content code{background:rgba(0,255,170,.1);padding:2px 6px;border-radius:4px;color:var(--accent)}
+.article-content pre{background:rgba(0,0,0,.3);padding:16px;border-radius:8px;overflow-x:auto;margin:20px 0;border:1px solid var(--border-color)}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<nav>
+    <a href="index.html" class="logo">我的博客</a>
+    <div class="nav-links">
+        <a href="home.html">首页</a>
+        <a href="articles.html" class="active">文章</a>
+        <a href="categories.html">分类</a>
+        <a href="tags.html">标签</a>
+        <a href="music.html">音乐</a>
+        <a href="about.html">关于</a>
+    </div>
+    <div class="nav-actions">
+        <a href="#" class="login-btn">登录</a>
+        <a href="#" class="start-btn">写文章</a>
+    </div>
+</nav>
+<div class="container">
+    <div class="article-header">
+        <h1 class="article-title-main">如何用 Supabase 搭建免费后端服务</h1>
+        <div class="article-meta"><span>发布时间：2026-04-20</span><span>阅读：128</span><span>分类：后端开发</span></div>
+        <div class="article-tags"><span class="tag">Supabase</span><span class="tag">后端</span><span class="tag">无服务器</span></div>
+    </div>
+    <div class="article-content">
+        <p>Supabase 是一个开源的 Firebase 替代品，提供了数据库、认证、存储、实时订阅等功能，而且有免费的额度，非常适合个人项目和小型应用使用。</p>
+        <h2>1. 注册 Supabase 账号</h2>
+        <p>首先访问 <a href="https://supabase.com" style="color:var(--accent)">Supabase 官网</a>，使用 GitHub 账号登录，创建一个新的项目。</p>
+        <h2>2. 创建数据库表</h2>
+        <p>在 Supabase 控制台中，进入 SQL Editor，创建所需的数据表。例如创建一个用户表：</p>
+        <pre>CREATE TABLE users (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  email TEXT UNIQUE NOT NULL,
+  name TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);</pre>
+        <h2>3. 配置认证</h2>
+        <p>Supabase 内置了邮箱密码、GitHub、Google 等多种认证方式，只需在控制台中启用即可。</p>
+        <h2>4. 在前端中使用</h2>
+        <p>安装 Supabase JS 客户端：</p>
+        <pre>npm install @supabase/supabase-js</pre>
+        <p>初始化并使用：</p>
+        <pre>import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = '你的项目URL'
+const supabaseAnonKey = '你的匿名密钥'
+const supabase = createClient(supabaseUrl, supabaseAnonKey)</pre>
+        <h2>5. 总结</h2>
+        <p>通过以上步骤，你就可以快速搭建一个完整的后端服务，无需关心服务器运维问题，专注于业务逻辑的实现。</p>
+    </div>
+</div>
+<footer><p>© 2026 我的技术博客 | Powered by HTML + CSS</p></footer>
+<script src="./static/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>分类 - 我的技术博客</title>
+<link rel="stylesheet" href="./static/common.css">
+<style>
+.container{max-width:1000px;margin:40px auto;padding:0 40px}
+.page-title{font-size:28px;color:var(--accent);margin-bottom:20px;text-shadow:0 0 20px var(--accent-glow)}
+.page-desc{color:var(--text-secondary);margin-bottom:30px}
+.cate-card{background:var(--bg-card);backdrop-filter:blur(10px);border:1px solid var(--border-color);border-radius:8px;padding:20px;margin-bottom:16px;transition:all .4s cubic-bezier(.34,1.56,.64,1);transform-origin:center bottom;cursor:none}
+.cate-card:hover{border-color:var(--accent);transform:translateY(-6px) scale(1.01);box-shadow:0 12px 32px rgba(0,255,170,.15),0 0 0 1px var(--border-hover)}
+.cate-count{display:inline-block;background:rgba(0,255,170,.1);color:var(--accent);padding:2px 8px;border-radius:10px;font-size:12px;margin-left:10px;border:1px solid var(--border-color)}
+.cate-card h3{color:#fff;font-size:18px;margin-bottom:8px}
+.cate-card p{color:var(--text-secondary);font-size:14px}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<nav>
+    <a href="index.html" class="logo">我的博客</a>
+    <div class="nav-links">
+        <a href="home.html">首页</a>
+        <a href="articles.html">文章</a>
+        <a href="categories.html" class="active">分类</a>
+        <a href="tags.html">标签</a>
+        <a href="music.html">音乐</a>
+        <a href="about.html">关于</a>
+    </div>
+    <div class="nav-actions">
+        <a href="#" class="login-btn">登录</a>
+        <a href="#" class="start-btn">写文章</a>
+    </div>
+</nav>
+<div class="container">
+    <h1 class="page-title">文章分类</h1>
+    <p class="page-desc">按领域浏览所有文章</p>
+    <div class="cate-card" onclick="location.href="articles.html?cate=网络技术'">
+        <h3>网络技术 <span class="cate-count">12篇</span></h3>
+        <p>路由交换、网络协议、云网络相关内容</p>
+    </div>
+    <div class="cate-card" onclick="location.href="articles.html?cate=后端开发'">
+        <h3>后端开发 <span class="cate-count">8篇</span></h3>
+        <p>数据库、服务端、无服务器开发</p>
+    </div>
+    <div class="cate-card" onclick="location.href="articles.html?cate=前端与部署'">
+        <h3>前端与部署 <span class="cate-count">6篇</span></h3>
+        <p>HTML/CSS、Vercel、Cloudflare部署</p>
+    </div>
+    <div class="cate-card" onclick="location.href="articles.html?cate=学习笔记'">
+        <h3>学习笔记 <span class="cate-count">15篇</span></h3>
+        <p>日常学习、踩坑记录、知识点总结</p>
+    </div>
+</div>
+<footer><p>© 2026 我的技术博客 | Powered by HTML + CSS</p></footer>
+<script src="./static/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>关于 - 我的技术博客</title>
+<link rel="stylesheet" href="./static/common.css">
+<style>
+.container{max-width:800px;margin:40px auto;padding:0 40px}
+.page-title{font-size:28px;color:var(--accent);margin-bottom:20px;text-shadow:0 0 20px var(--accent-glow)}
+.about-card{background:var(--bg-card);backdrop-filter:blur(10px);border:1px solid var(--border-color);border-radius:8px;padding:30px;line-height:2;transition:all .4s cubic-bezier(.34,1.56,.64,1);transform-origin:center bottom}
+.about-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,255,170,.12),0 0 0 1px var(--border-hover)}
+.about-card p{margin-bottom:16px}
+.about-card .highlight{color:var(--accent);font-weight:500;text-shadow:0 0 10px var(--accent-glow)}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<nav>
+    <a href="index.html" class="logo">我的博客</a>
+    <div class="nav-links">
+        <a href="home.html">首页</a>
+        <a href="articles.html">文章</a>
+        <a href="categories.html">分类</a>
+        <a href="tags.html">标签</a>
+        <a href="music.html">音乐</a>
+        <a href="about.html" class="active">关于</a>
+    </div>
+    <div class="nav-actions">
+        <a href="#" class="login-btn">登录</a>
+        <a href="#" class="start-btn">写文章</a>
+    </div>
+</nav>
+<div class="container">
+    <h1 class="page-title">关于本站</h1>
+    <div class="about-card">
+        <p>你好，我是一名网络专业学生。</p>
+        <p>这个博客用来记录我的<span class="highlight">网络技术、编程学习、踩坑经验与项目实践</span>。</p>
+        <p>希望能在这里沉淀知识，也能帮到同样在学习路上的朋友。</p>
+        <br>
+        <p><strong>学习方向：</strong>计算机网络 / 后端开发 / 前端与云部署</p>
+        <p><strong>技术栈：</strong>HTML/CSS、Supabase、Vercel、Cloudflare、网络协议</p>
+        <p><strong>建站初衷：</strong>用输出倒逼输入，把零散的知识点系统化，同时记录自己的成长轨迹。</p>
+    </div>
+</div>
+<footer><p>© 2026 我的技术博客 | Powered by HTML + CSS</p></footer>
+<script src="./static/common.js"></script>
+</body>
+</html>
